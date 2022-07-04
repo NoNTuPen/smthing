@@ -14,7 +14,7 @@ double input_double()
 	double number;
 	bool flag = true;
 	while (flag) {
-		
+
 		if (scanf("%lf", &number) != 1)
 		{
 			while (getchar() != '\n');
@@ -36,6 +36,11 @@ void main() {
 	a = input_double();
 	printf("\nB: ");
 	b = input_double();
-	result = res(a, b);
-	printf("\nA/b = %.2f/%.2f = %.2f", a, b, result);
+	if (b != 0) {
+		result = res(a, b);
+		printf("\nA/b = %.2f/%.2f = %.2f", a, b, result);
+	}
+	else {
+		printf("B=0. It's impossible!");
+	}
 }
